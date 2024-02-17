@@ -1,0 +1,130 @@
+body {
+    color: aliceblue;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.mainheadingskill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 61, 11);
+    color:red;
+    width:100%;
+    height:11rem;
+   
+    
+    border-bottom-left-radius:55rem 4rem ;
+    border-bottom-right-radius:55rem 4rem ;
+    animation-name: skillhead;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite ;
+
+}
+@keyframes skillhead{
+    0%{background-color: aqua; transform: rotate(0deg);}
+    50%{background-color: rgb(6, 6, 6);transform:  rotate(5deg);}
+    70%{background-image: linear-gradient(to right, red , yellow);}
+    90%{background-image: linear-gradient(to right, rgb(239, 216, 7) , rgb(15, 198, 235));}
+    100%{background-color: rgb(9, 160, 31);transform: rotate(0deg);}
+
+}
+
+.mainheadingskill div{
+    font-weight: 800;
+    opacity: .8;
+    text-align: center;
+    font-size: 11rem;
+   
+    color:red;
+    padding-top: 1rem;
+  
+
+    animation-name: myheading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes myheading {
+    0%{color: aqua; transform: rotateY(0deg);}
+    50%{color:linear-gradient(to right, rgb(218, 202, 58) );transform:  rotateY(90deg);}
+    100%{color: rgb(9, 160, 31);transform: rotateY(360deg);}
+
+}
+
+
+
+.leftsideitems {
+    margin:5px 21px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 2rem;
+}
+.itemcontainer{
+    width:100%;
+}
+
+.myskill {
+    font-size: xx-large;
+    margin: 0.5rem 21rem 0.5rem 0rem;
+    font-weight: 500;
+}
+
+.myskillpercentage{
+    float:right;
+    
+}
+
+.mainbar1 {
+    width: 100%;
+    border-radius: 5px;
+    background-color: coral;
+}
+
+.mainbar {
+    border-radius: 5px;
+    height: 11px;
+    animation-name: mainanimation;
+    animation-duration: 3s;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: forwards;
+}
+.itemcontainer .mainbar {
+    max-width: 95vw;
+}
+.leftsideitems:hover .mainbar{
+    animation-name: mainanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes mainanimation {
+    0% { background-color: brown; width: 11vw; }
+    25% { background-color: rgb(5, 232, 244); width: 33vw; }
+    50% { background-color: blue; }
+    100% { background-color: rgb(5, 245, 237); }
+}
+
+@media screen and (max-width: 900px) {
+    .leftsideitems {
+        word-wrap: wrap;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+     
+       
+       
+       
+    }
+    .itemcontainer{
+        width:92%;
+    }
+
+  
+}
+
