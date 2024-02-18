@@ -19,9 +19,9 @@ const Skill = () => {
   return (
     <div className={style.mainbox}>
       
-       <div className={style.mainheadingskill}> <div>MySkill</div></div>
+       <div className={style.mainheadingskill}> <div> MySkill</div></div>
    
-      <div className={style.main}>
+      
         <div className={style.leftsideitems}>
           {data.map((ele) => (
             <div className={style.itemcontainer}>
@@ -38,7 +38,7 @@ const Skill = () => {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 };
 

@@ -23,25 +23,76 @@ const data={
     const handlechange=(e)=>{
         const name=e.target.name
         const value=e.target.value
-        if(name=="name" && value.length<4){
+        if(name=="name" ){
+            if(value.length<4){
             setinputsErr({...inputsErr,["nameErr"]:"name should greater than 4 and not empty"}) ;  
-           console.log("invalid input")
-           return
-        }
-        if(name=="email" && value.length<4){
-            setinputsErr({...inputsErr,["emailErr"]:"check your email and not empty"}) ;  
-         
-           return
-        }
+           console.log(inputsErr)
+           return} else{
+            
+            delete inputsErr.nameErr
             setinputs((old)=>{
-              return  {...old,[name]:value}
-            })
+                return  {...old,[name]:value}
+              })
+           }
+        }
+
+        if(name=="email"){
+            const reg=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+
+            if(!reg.test(value)){
+                setinputsErr({...inputsErr,["emailErr"]:"check your email and not empty"}) ;  
+                return
+            }else{
+                 delete inputsErr?.emailErr
+                 setinputs((old)=>{
+                    return  {...old,[name]:value}
+                  })
+            }
+            
+         
+        }
+
+        if(name==="mobile"){
+
+             if(value.length<10 || value.length>10){
+                setinputsErr({...inputsErr,["telnoErr"]:"mobile no should be length 10 like 9814560954"}) ;  
+                return
+             }
+             else{
+                delete inputsErr?.telnoErr
+                setinputs((old)=>{
+                    return  {...old,[name]:value}
+                  })
+                return
+             }
+        }
+        if(name==="enquire_text"){
+
+            if(value.length<10){
+               setinputsErr({...inputsErr,["enquire_textErr"]:"enquire text must greater than 10"}) ;  
+               
+               return
+            }
+            else{
+               delete inputsErr?.enquire_textErr
+               setinputs((old)=>{
+                return  {...old,[name]:value}
+              })
+              
+            }
+       }
+
+
+
+            
     }
+
 
 
     const handlesubmit= async (e)=>{
         e.preventDefault();
         console.log(data)
+        if(Object.keys(inputsErr).length<1){
 
         const mydata={
             service_id:service_id,
@@ -58,6 +109,9 @@ const data={
          const response= await axios.post("https://api.emailjs.com/api/v1.0/email/send",mydata).then((data)=>console.log(data)).catch((err)=>{console.log(err)})
         
          console.log(response);
+    }else{
+        alert("fill all inputs fields")
+    }
     }
 
 
@@ -81,13 +135,18 @@ const data={
         <form  onSubmit={(e) => handlesubmit(e)}>
             <label for="name1">Name:-</label><br/>
             <input type="text" id="name1" name="name" onChange={handlechange}/> <br/>
+            {inputsErr?.nameErr}
             <label for="email1" name="email">Email:-</label><br/>
              <input type="email" name="email" id="email1" onChange={handlechange}/><br/>
+
+             {inputsErr?.emailErr}
              <label for="telno">mobile no.:-</label><br/>
-            <input type="tel" id="telno" name="mobile" onChange={handlechange} /> <br/>
+            <input type="number" id="telno" name="mobile" onChange={handlechange} /> <br/>
+             <p>{inputsErr?.telnoErr}</p>
              <label for="writehere">Enquire:-</label><br/>
             <textarea className={style.enquire_text} type="text" name="enquire_text"  id="writehere" rows="5" placeholder="text here" onChange={handlechange} /> <br/>
-            <input  type="submit" />
+            <p>{inputsErr?.enquire_textErr}</p>
+            <input style={{width:"25%",height:"3rem",fontSize:"1rem",fontWeight:"800"}} type="submit" />
         </form>
         </div>
       

@@ -1,15 +1,21 @@
 body {
     color: aliceblue;
     box-sizing: border-box;
-    overflow-x: hidden;
+}
+
+.mainbox{
+    max-width: 100%;
+    padding-top: 1rem;
+    margin:2rem 1rem;
+    border:8px solid blue;
 }
 
 
 .mainheadingskill{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(244, 61, 11);
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(244, 61, 11);
     color:red;
     width:100%;
     height:11rem;
@@ -18,7 +24,7 @@ body {
     border-bottom-left-radius:55rem 4rem ;
     border-bottom-right-radius:55rem 4rem ;
     animation-name: skillhead;
-    animation-duration: 5s;
+    animation-duration: 11s;
     animation-fill-mode: forwards;
     animation-iteration-count:infinite ;
 
@@ -26,8 +32,9 @@ body {
 @keyframes skillhead{
     0%{background-color: aqua; transform: rotate(0deg);}
     50%{background-color: rgb(6, 6, 6);transform:  rotate(5deg);}
-    70%{background-image: linear-gradient(to right, red , yellow);}
-    90%{background-image: linear-gradient(to right, rgb(239, 216, 7) , rgb(15, 198, 235));}
+    70%{background-image: linear-gradient(to right, red , yellow);transform:  rotate(0deg);}
+    90%{background-image: linear-gradient(to right, rgb(239, 216, 7) , rgb(15, 198, 235));transform:  rotate(-5deg);}
+    95%{background-image: linear-gradient(to right, red , yellow);transform:  rotate(-2deg);}
     100%{background-color: rgb(9, 160, 31);transform: rotate(0deg);}
 
 }
@@ -38,7 +45,7 @@ body {
     text-align: center;
     font-size: 11rem;
    
-    color:red;
+    color:rgb(243, 239, 239);
     padding-top: 1rem;
   
 
@@ -49,6 +56,7 @@ body {
 @keyframes myheading {
     0%{color: aqua; transform: rotateY(0deg);}
     50%{color:linear-gradient(to right, rgb(218, 202, 58) );transform:  rotateY(90deg);}
+    75%{color:linear-gradient(to right, rgb(218, 202, 58) );transform:  rotateY(180deg);}
     100%{color: rgb(9, 160, 31);transform: rotateY(360deg);}
 
 }
@@ -56,14 +64,14 @@ body {
 
 
 .leftsideitems {
-    margin:5px 21px;
+    /* margin:5px 21px; */
     display: grid;
+    max-width: 100%;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
-    row-gap: 2rem;
+    gap:2rem;
 }
 .itemcontainer{
-    width:100%;
+    max-width:100%;
 }
 
 .myskill {
@@ -88,7 +96,7 @@ body {
     height: 11px;
     animation-name: mainanimation;
     animation-duration: 3s;
-    /* animation-iteration-count: infinite; */
+  
     animation-fill-mode: forwards;
 }
 .itemcontainer .mainbar {
@@ -113,16 +121,41 @@ body {
 @media screen and (max-width: 900px) {
     .leftsideitems {
         word-wrap: wrap;
+        max-width: 100%;
         grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
-     
+     }
+     .mainheadingskill div{
+        font-weight: 400;
+        opacity: .8;
+        text-align: center;
+        font-size: 5rem;
        
-       
-       
+        color:red;
+        padding-top: 1rem;
+      
+    
     }
     .itemcontainer{
-        width:92%;
+        width:100%;
+    }
+    .leftsideitems:hover .mainbar{
+        animation-name: mainanimation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+    }
+    .mainbar1 {
+        width: 100%;
+       
+        border-radius: 5px;
+        background-color: coral;
+    }
+
+    .myskill {
+        margin: 0.5rem 11rem 0.5rem 0rem;
+        
     }
 
   

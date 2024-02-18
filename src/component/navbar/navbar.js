@@ -8,7 +8,11 @@ const Navbar=()=>{
     setshow(true)
  }
  const hidenav=()=>{
-    setshow(false)
+    
+    setshow(old=>{
+        if(old===false){
+            return true
+        }else return false})
  }
 
 

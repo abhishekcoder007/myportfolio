@@ -4,6 +4,7 @@ body{
 
 .main_container{
     background-color: rgb(101, 105, 43);
+    width:100%;
     color:aliceblue;
     display:flex;
     justify-content: space-evenly;
@@ -38,11 +39,12 @@ body{
             display:block;
            color:aliceblue;
             margin-right: 15px;
+            padding-bottom: 2rem;
             font-size: medium;
             font-weight: 400;
             width:50%;
-            /* border-radius:0px 5px 0px 0px; */
-            height: 99vh;
+            height: fit-content;
+            background-color: rgb(11, 11, 11);
         }
         .mobilenav div{
             margin: 11px;

@@ -7,36 +7,38 @@ body{
   padding: 21px;
   background-color: #080808;
   justify-content: center;
-  align-items: center;
-  /* width:92rem; */
+  
+ 
 }
 .leftsection {
 }
 .myname {
   color: #ffffff;
-  display: flex;
+  /* display: flex; */
 
   font-family: Raleway, "Source Sans Pro";
   font-size: 4.4rem;
   font-weight: 800;
   line-height: 1.175;
   margin-bottom: 2rem;
+  margin-top: 5rem;
 
 }
 .intro_text {
-  color: #9c9c9c;
+  color: white;
 
   font-family: IBM Plex Mono, "Source Sans Pro";
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.014rem;
   line-height: 1.7;
+  word-break: break-all;
   max-width: 44.5rem;
 }
 .intro_button {
   align-items: center;
   color: #ffffff;
-  background-color: #3e8e00;
+  background-color: #dbd954;
   border-radius: 5rem;
   box-shadow: 0 0.8rem 3rem rgba(63, 142, 0, 0.5);
   box-sizing: border-box;
@@ -44,6 +46,10 @@ body{
   margin-right: 1rem;
   padding: 1em;
   width: 12rem;
+}
+.intro_button:hover{
+color:rgb(8, 7, 7);
+background-color: white;
 }
  .mytextbtn{
   color: #ffffff;
@@ -79,6 +85,7 @@ body{
 @media screen  and  (max-width:600px){
   .main{
     flex-direction: column-reverse;
+    padding:0px;
   }
 
   .myname {
@@ -95,10 +102,18 @@ body{
     align-items: center;
   }
   .intro_text {
-  position :relative;
-  left:2rem;
-  padding-right: 1rem;
-  overflow:hidden;
+
+  margin: 1rem;
+  /* overflow:hidden; */
+  }
+
+  .intro_button {
+    
+    display: flex;
+   align-items: start;
+   justify-content: start;
+    margin-right: 0rem;
+   
   }
   .rightsection {
     width:95%;
