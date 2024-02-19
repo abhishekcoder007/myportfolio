@@ -13,13 +13,21 @@ const Home=()=>{
         <div className={style.main_head}>
             <Navbar/>
         </div>
-        <div>
+        <div id="1">
         <Aboutus/>
-        <Projects/>
-        <Skill/>
-
         </div>
-        {/* <About/> */}
+        <div id="3">
+        <Projects/>
+        </div>
+        <div id="4">
+        
+        <Skill/>
+          
+        </div>
+        <div id="5">
+        <About/>
+        </div>
+      
      
         </>
     )

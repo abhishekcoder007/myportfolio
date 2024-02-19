@@ -106,9 +106,14 @@ const data={
                 message:inputs?.enquire_text
             }
         }
-         const response= await axios.post("https://api.emailjs.com/api/v1.0/email/send",mydata).then((data)=>console.log(data)).catch((err)=>{console.log(err)})
+         const response= await axios.post("https://api.emailjs.com/api/v1.0/email/send",mydata).then((ele)=>{
+            if(ele?.data.toLowerCase()==="ok"){
+                alert("your message send to Abhishek sucessfull")
+             }
+         }).catch((err)=>{console.log(err)})
         
-         console.log(response);
+         
+       
     }else{
         alert("fill all inputs fields")
     }

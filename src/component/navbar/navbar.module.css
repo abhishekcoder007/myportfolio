@@ -8,6 +8,7 @@ body{
     color:aliceblue;
     display:flex;
     justify-content: space-evenly;
+    padding:15px 0px;
     align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
@@ -15,6 +16,11 @@ body{
        margin-right: 15px;
        font-size: medium;
        font-weight: 400;
+    }
+    a{
+        color:aliceblue;
+        font-size: medium;
+        font-weight: 400;
     }
     .main_containeritems div{
         display:none;
@@ -42,7 +48,7 @@ body{
             padding-bottom: 2rem;
             font-size: medium;
             font-weight: 400;
-            width:50%;
+            width:95%;
             height: fit-content;
             background-color: rgb(11, 11, 11);
         }

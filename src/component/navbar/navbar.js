@@ -27,10 +27,11 @@ const Navbar=()=>{
                 <h1>Portfolio</h1>
             </div>
             <div className={style.main_containeritems} >
-                <span>home</span>
-                <span>about</span>
-                <span>project</span>
-                <span>contact</span>
+                <span> <a href="#1" style={{textDecoration:"none"}}>home</a></span>
+                <span> <a href="#2" style={{textDecoration:"none"}}>about</a></span>
+                <span> <a href="#3" style={{textDecoration:"none"}}>project</a></span>
+                <span> <a href="#4" style={{textDecoration:"none"}}>skill</a></span>
+                <span> <a href="#5" style={{textDecoration:"none"}}>contact</a></span>
                 <div  className={style.main_mobileview}  onClick={hidenav}  onMouseEnter={shownav}>||||</div>
 
             </div>
@@ -38,10 +39,11 @@ const Navbar=()=>{
 
         {show&&<div className={style.mobilenav}>
         <p style={{ marginBottom:"21px",textAlign:"end"}} onClick={hidenav}>**</p>
-                <div>home </div> 
-                <div>about</div>
-                <div>project</div>
-                <div>contact</div>  
+                <div><a href="#1" style={{textDecoration:"none"}}>home</a> </div> 
+                <div> <a href="#2" style={{textDecoration:"none"}}>about</a></div>
+                <div><a href="#3" style={{textDecoration:"none"}}>project</a></div>
+                <div><a href="#4" style={{textDecoration:"none"}}>skill</a></div>  
+                <div> <a href="#5" style={{textDecoration:"none"}}>contact</a></div>
         </div>}
     
 
@@ -50,3 +52,4 @@ const Navbar=()=>{
 }
 
 export default Navbar;
+

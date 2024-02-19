@@ -15,7 +15,6 @@ body{
     display:flex;
     background-color: aliceblue;
     gap: 5rem;
-    /* border: 2px solid blue; */
     margin:5px 1.4rem 0px 21px;
     padding:1.5rem;
 
@@ -27,6 +26,7 @@ body{
 .rightside{
     width:41vw;
     height:auto;
+  
   
    
 }
@@ -49,13 +49,39 @@ body{
 
 }
 .projectcontent{
-    word-wrap: break-word;
-    /* border:2px solid blue; */
+    font-family: IBM Plex Mono, "Source Sans Pro";
+   display:flex;
+   flex-direction: column;
+   align-items: start;
+    color: brown;
     word-break: break-all;
     font-size: initial;
     transition:font-size 2s;
     
 }
+.tehstackhead{
+    font-weight: 800;
+    font-size: xx-large;
+
+}
+.techlink{
+  position: relative;
+  left:0;
+}
+.techdetails{
+    font-family: IBM Plex Mono, "Source Sans Pro";
+    color:chocolate;
+    font-weight: 800;
+    font-size: xx-large;
+
+}
+.tehstack span{
+   font-size: medium;
+   font-weight: 600;
+   color: black;
+
+}
+
 
 .projectcontent:hover i{
     font-size: larger;
