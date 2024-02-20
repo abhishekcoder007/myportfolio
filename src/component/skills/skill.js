@@ -3,8 +3,9 @@ import style from "./skill.module.css";
 
 const Skill = () => {
   const data = [
-    { name: "html", percent: "99%" },
+    { name: "html", percent: "95%" },
     { name: "css", percent: "89%" },
+    { name: "javascript", percent: "91%" },
     { name: "react", percent: "91%" },
     { name: "react-router-dom", percent: "91%" },
     { name: "redux", percent: "91%" },

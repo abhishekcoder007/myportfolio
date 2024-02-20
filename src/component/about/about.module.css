@@ -51,11 +51,18 @@ input[type="submit"]{
     border-radius: 11px;
     width:100%;
 }
+i{
+    font-size: xx-large;
+    word-break: break-all;
+}
 .form_container{
     width:51%;
     height:auto;
   opacity: 0.9;
  position: relative;
+ background-color: rgb(49, 52, 58);
+ padding: 21px 11px 4rem 5px;
+ border-radius: 5px;
  }
 .formabout_container{
     display:flex;
@@ -63,8 +70,9 @@ input[type="submit"]{
     align-items: center;
     width:31%;
     height:auto;
-    border:2px solid white;
+    border:5px solid white;
     color: white;
+    padding: 11px;
 }
 @media screen and   (max-width:900px){
 

@@ -1,0 +1,12 @@
+.main{
+    background-color: rgb(67, 65, 65);
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    max-width: fit-content;
+    position: fixed;
+    top:31%;
+    left:0px;
+    gap:21px;
+    z-index: 11;
+}

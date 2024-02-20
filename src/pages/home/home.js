@@ -5,6 +5,8 @@ import Aboutus from "../../component/aboutus/aboutus";
 import Projects from "../../component/myprojects/projects";
 import About from "../../component/about/about";
 import Skill from "../../component/skills/skill";
+import Footer from "../../component/footer/Footer";
+import Contacts from "../../component/contacts_link/contacts";
 
 const Home=()=>{
     return(
@@ -27,6 +29,9 @@ const Home=()=>{
         <div id="5">
         <About/>
         </div>
+       <div>
+        <Contacts/>
+       </div>
       
      
         </>
