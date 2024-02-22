@@ -83,9 +83,9 @@ body{
 }
 
 
-.projectcontent:hover i{
+/* .projectcontent:hover i{
     font-size: larger;
-}
+} */
 @media screen  and  (max-width:600px){
 .main{
     flex-direction:column-reverse;
