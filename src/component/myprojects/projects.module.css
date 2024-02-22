@@ -56,8 +56,8 @@ body{
     color: brown;
     word-break: break-all;
     font-size: initial;
-    transition:font-size 2s;
-    
+    /* transition:font-size 2s;
+     */
 }
 .tehstackhead{
     font-weight: 800;
@@ -75,13 +75,15 @@ body{
     font-size: xx-large;
 
 }
+.techdetails i{
+    font-size: small;
+}
 .tehstack span{
    font-size: medium;
    font-weight: 600;
    color: black;
 
 }
-
 
 /* .projectcontent:hover i{
     font-size: larger;

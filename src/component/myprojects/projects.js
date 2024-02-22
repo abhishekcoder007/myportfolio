@@ -41,7 +41,7 @@ const Projects = () => {
             <p>
               <b className={style.techdetails}>Details:-</b>
 
-              <i>
+              <i style={{fontSize:"1.5rem"}}>
                 it is E-Commerce websites. By combining React, Recoil, React
                 Router DOM, and CSS, you can create a highly interactive and
                 seamless shopping experience for users. You can leverage the
@@ -86,7 +86,7 @@ const Projects = () => {
             </p>
             <p>
               <b className={style.techdetails}>Details:-</b>
-              <i>
+              <i style={{fontSize:"1.5rem"}}>
                 Welcome to my portfolio! Here, I showcase my projects and skills
                 in web development using a variety of technologies. From
                 front-end design to back-end functionality, I strive to create
